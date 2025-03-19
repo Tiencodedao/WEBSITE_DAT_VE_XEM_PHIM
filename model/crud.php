@@ -1,22 +1,33 @@
 <?php
-require_once "config.php";
+include_once 'config.php';
 
-class crud extends dbconfig
+class Crud
 {
+    private $db;
+    private $conn;
+
     public function __construct()
     {
-        parent::__contruct();
+        $this->db = new DbConfig();
+        $this->conn = $this->db->connect();
     }
-    // in du lieu ra man hinh
-    public function getData($sql)
+
+    // Hàm lấy tất cả sản phẩm
+    public function getProducts()
     {
-        $stmt = $this->conn->prepare($sql);
+        $query = "SELECT * FROM products";  // Thay đổi theo bảng sản phẩm của bạn
+        $stmt = $this->conn->prepare($query);
         $stmt->execute();
-        $result = $stmt->fetchAll();
-        return $result;
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-    public function action($sql)
+
+    // Hàm lấy chi tiết sản phẩm theo ID
+    public function getProductById($id)
     {
-        $this->conn->exec($sql);
+        $query = "SELECT * FROM products WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
