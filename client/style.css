@@ -120,9 +120,17 @@ header.shadow .logo {
 .btn:hover {
     background: #fa1216;
   }
+.swiper-slide1 {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    /* display: block; */
+}
 .container{
     width: 100%;
-    min-height: 640px;
+    min-height: 670px;
     position: relative;
     display: flex;
     align-items: center;
@@ -149,7 +157,7 @@ header.shadow .logo {
 }
 .home-text {
     z-index: 1000;
-    padding: 0 150px;
+    padding: 150px;
   }
   
   .home-text span {
@@ -365,5 +373,52 @@ header.shadow .logo {
     }
     .navbar.active {
         top: 100%;
-    }       
+    }
+    .home-text h1 {
+        font-size: 2.4rem;
+    }
+    .btn {
+        padding: 0.6rem 1.2rem;
+      }     
+      .movies-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+      }
+             
 }
+@media (max-width: 472px) {
+.newsletter form .email {
+      width: auto;
+    }
+  }
+  
+.footer {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+@media (max-width: 370px) {
+    header {
+    padding: 6px 4%;
+    }
+  
+    .home-text h1 {
+      font-size: 1.7rem;
+    }
+    .play {
+        right: 2rem;
+        bottom: 8%;
+      }
+      
+    .play.bx {
+        padding: 7px;
+      }
+      
+    .movies-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+      }
+    .box .box-img {
+        height: 240px;
+      }
+      
+  }
+    
