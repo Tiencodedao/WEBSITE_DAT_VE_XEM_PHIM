@@ -22,7 +22,7 @@ class Category
     {
         global $pdo;
         $stmt = $pdo->prepare("INSERT INTO categories (name, status, created_at, updated_at) 
-                               VALUES (?, ?, NOW(), NOW())");
+        VALUES (?, ?, NOW(), NOW())");
         return $stmt->execute([$name, $status]);
     }
 

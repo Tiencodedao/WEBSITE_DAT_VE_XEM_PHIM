@@ -7,7 +7,7 @@ class BookingSeat
     {
         global $pdo;
         $stmt = $pdo->prepare("INSERT INTO booking_seats (booking_ticket_id, seat_id, created_at, updated_at)
-                               VALUES (?, ?, NOW(), NOW())");
+        VALUES (?, ?, NOW(), NOW())");
         return $stmt->execute([$ticketId, $seatId]);
     }
 
