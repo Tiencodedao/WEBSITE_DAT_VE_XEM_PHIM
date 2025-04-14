@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="css/style.css">
+	<title>AdminSite</title>
+</head>
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand"><i class='bx bxs-smile icon'></i> AdminSite</a>
+		<ul class="side-menu">
+			<li><a href="#" class="active"><i class='bx bxs-dashboard icon' ></i> Dashboard</a></li>
+			<li class="divide" data-text="main">_________________________________</li>
+			<li>
+				<a href="staff.html"><i class='bx bxs-inbox icon' ></i> Quản lý tài khoản <i class='bx bx-chevron-right icon-right' ></i></a>
+			</li>
+			<li><a href="move.html"><i class='bx bxs-chart icon' ></i> Quản Lý phim</a></li>
+			<li><a href="Room.html"><i class='bx bxs-widget icon' ></i> Quản Lý Phòng</a></li>
+			<li class="divide" data-text="table and forms">_________________________________</li>
+			<li><a href="bill.html"><i class='bx bx-table icon' ></i> Quản lý hóa đơn </a></li>
+			<li>
+				<a href="Movie_Screening.html"><i class='bx bxs-notepad icon' ></i> Quản lý xuất chiếu </a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+     <!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' ></i>
+			<form action="#">
+				<div class="form-group">
+					<input type="text" placeholder="Search...">
+					<i class='bx bx-search icon' ></i>
+				</div>
+			</form>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-bell icon' ></i>
+				<span class="badge">5</span>
+			</a>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-message-square-dots icon' ></i>
+				<span class="badge">8</span>
+			</a>
+			<span class="divider"></span>
+			<div class="profile">
+				<img src="../img/a1.jpg" alt="">
+				<ul class="profile-link">
+					<li><a href="#"><i class='bx bxs-user-circle icon' ></i> Profile</a></li>
+					<li><a href="#"><i class='bx bxs-cog' ></i> Settings</a></li>
+					<li><a href="#"><i class='bx bxs-log-out-circle' ></i> Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main class="main-content">
+            <section class="table-widget">
+                <h2 class="widget-title">Quản Lý Phòng Chiếu</h2> <div class="room-table-header"> <span class="column-header room-header">Phòng</span> <span class="column-header capacity-header">Sức chứa</span> <span class="column-header screen-header">Loại màn hình</span> <span class="column-header sound-header">Âm thanh</span> <span class="column-header status-header">Trạng Thái</span> <span class="column-header action-header">&nbsp;</span> </div>
+        
+                <ul class="room-table-list"> <li class="room-row"> <div class="column room-name-info"> <i class='bx bx-tv room-icon'></i> <span class="room-name">Phòng 1</span>
+                        </div>
+                        <div class="column capacity-info"> 150 Ghế
+                        </div>
+                        <div class="column screen-type-info"> 3D Digital
+                        </div>
+                        <div class="column sound-system-info"> Dolby 7.1
+                        </div>
+                        <div class="column status-info">
+                            <span class="status-tag available">Sẵn sàng</span> </div>
+                        <div class="column action-info">
+                             <div class="action-container">
+                                <button class="action-button" aria-label="More options" aria-expanded="false" onclick="toggleActionMenu(this)">
+                                     <i class='bx bx-dots-vertical-rounded'></i>
+                                </button>
+                                <ul class="action-menu">
+                                     <li><a href="#"><i class='bx bx-edit'></i> Sửa thông tin</a></li>
+                                    <li><a href="#"><i class='bx bx-calendar-week'></i> Xem lịch trống</a></li>
+                                    <li><a href="#"><i class='bx bx-wrench'></i> Đánh dấu bảo trì</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+        
+                    <li class="room-row">
+                        <div class="column room-name-info">
+                            <i class='bx bx-tv room-icon'></i>
+                            <span class="room-name">Phòng 2 (IMAX)</span>
+                        </div>
+                        <div class="column capacity-info">
+                            250 Ghế
+                        </div>
+                        <div class="column screen-type-info">
+                            IMAX Laser
+                        </div>
+                        <div class="column sound-system-info">
+                            IMAX Enhanced
+                        </div>
+                        <div class="column status-info">
+                             <span class="status-tag maintenance">Bảo trì</span> </div>
+                        <div class="column action-info">
+                            <div class="action-container">
+                                <button class="action-button" aria-label="More options" aria-expanded="false" onclick="toggleActionMenu(this)">
+                                     <i class='bx bx-dots-vertical-rounded'></i>
+                                </button>
+                                <ul class="action-menu">
+                                     <li><a href="#"><i class='bx bx-edit'></i> Sửa thông tin</a></li>
+                                     <li><a href="#"><i class='bx bx-calendar-week'></i> Xem lịch trống</a></li>
+                                     <li><a href="#"><i class='bx bx-check-shield'></i> Hoàn tất bảo trì</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+        
+                     <li class="room-row">
+                        <div class="column room-name-info">
+                            <i class='bx bx-tv room-icon'></i>
+                            <span class="room-name">Phòng VIP</span>
+                        </div>
+                        <div class="column capacity-info">
+                            50 Ghế
+                        </div>
+                        <div class="column screen-type-info">
+                            4K HDR
+                        </div>
+                        <div class="column sound-system-info">
+                            Dolby Atmos
+                        </div>
+                        <div class="column status-info">
+                             <span class="status-tag in-use">Đang sử dụng</span> </div>
+                        <div class="column action-info">
+                             <div class="action-container">
+                                <button class="action-button" aria-label="More options" aria-expanded="false" onclick="toggleActionMenu(this)">
+                                     <i class='bx bx-dots-vertical-rounded'></i>
+                                </button>
+                                <ul class="action-menu">
+                                     <li><a href="#"><i class='bx bx-edit'></i> Sửa thông tin</a></li>
+                                     <li><a href="#"><i class='bx bx-calendar-week'></i> Xem lịch trống</a></li>
+                                     <li><a href="#"><i class='bx bx-wrench'></i> Đánh dấu bảo trì</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+        
+                     </ul>
+            </section>
+            </main>
+		<!-- MAIN -->
+	</section>
+	<!-- NAVBAR -->
+        
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
