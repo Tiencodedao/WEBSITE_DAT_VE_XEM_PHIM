@@ -11,7 +11,7 @@ $movies = Product::all(); // hoặc giới hạn 10 phim đầu tiên nếu cầ
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moves Website</title>
-    <link rel="stylesheet" href="client/style.css">
+    <link rel="stylesheet" href="client/css/style.css">
     <!-- Box Icons -->
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -87,7 +87,7 @@ $movies = Product::all(); // hoặc giới hạn 10 phim đầu tiên nếu cầ
             <?php foreach ($movies as $movie): ?>
                 <div class="box">
                     <div class="box-img">
-                        <img src="client/img/<?= basename($movie['image']) ?>" alt="">
+                        <img src="client/img/<?= basename($movie['image']) ?>" alt="" title="abc">
 
                     </div>
                     <h3><?= htmlspecialchars($movie['name']) ?></h3>

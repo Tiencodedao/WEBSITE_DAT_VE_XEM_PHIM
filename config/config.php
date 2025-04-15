@@ -1,7 +1,7 @@
 <?php
 // Cấu hình kết nối database
 $host = 'localhost';           // Server host (thường là localhost)
-$dbname = 'pagefim2';  // Tên database của bạn
+$dbname = 'cinema';  // Tên database của bạn
 $username = 'root';            // Tài khoản MySQL (XAMPP thường là root)
 $password = '';                // Mật khẩu (XAMPP để trống)
 
