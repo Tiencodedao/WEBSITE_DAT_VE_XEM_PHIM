@@ -576,6 +576,8 @@ main .btn-send {
 main .btn-send:hover {
 	background: var(--dark-blue);
 }
+
+
 /* MAIN */
 /* CONTENT */
 
@@ -945,7 +947,7 @@ main .btn-send:hover {
 
 .product-header {
     flex: 3;              /* Giống .column.product-info */
-    min-width: 250px;     /* Giống .column.product-info */
+    min-width: 190px;     /* Giống .column.product-info */
     padding-left: 60px;   /* Khoảng cách để thẳng với tên sản phẩm */
 }
 
@@ -976,7 +978,11 @@ main .btn-send:hover {
 	
 	
 }
-
+.movie-image {
+    width: 100px;
+    height: 150px;
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
 
 
 
@@ -1675,3 +1681,4 @@ main .btn-send:hover {
 
 /* --- KẾT THÚC CSS BẢNG QUẢN LÝ PHÒNG --- */
 /* Room */
+/* Định dạng cho nút "Thêm phim mới" */
