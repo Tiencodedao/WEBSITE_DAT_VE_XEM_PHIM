@@ -21,20 +21,37 @@ class User
     }
 
     // Tạo mới tài khoản
-    public static function create($name, $email, $username, $password, $role)
+    public static function create($user_name, $user_email, $password, $user_role, $isStaff = false)
     {
         global $pdo;
-        $stmt = $pdo->prepare("INSERT INTO Users (name, email, user_name, password, role) VALUES (?, ?, ?, ?, ?)");
-        return $stmt->execute([$name, $email, $username, password_hash($password, PASSWORD_DEFAULT), $role]);
+        $stmt = $pdo->prepare("INSERT INTO Users (user_name, user_email, user_password, user_role, IsStaff) 
+        VALUES (?, ?, ?, ?, ?)");
+        return $stmt->execute([
+            $user_name,
+            $user_email,
+            password_hash($password, PASSWORD_DEFAULT),
+            $user_role,
+            $isStaff ? 1 : 0
+        ]);
     }
 
     // Cập nhật thông tin tài khoản
-    public static function update($id, $name, $email, $username, $role)
+    public static function update($id, $user_name, $user_email, $user_role, $isStaff = false)
     {
         global $pdo;
-        $stmt = $pdo->prepare("UPDATE Users SET name = ?, email = ?, user_name = ?, role = ? WHERE user_id = ?");
-        return $stmt->execute([$name, $email, $username, $role, $id]);
+        $stmt = $pdo->prepare("UPDATE Users 
+        SET user_name = ?, user_email = ?, user_role = ?, IsStaff = ? 
+        WHERE user_id = ?");
+
+        return $stmt->execute([
+            $user_name,
+            $user_email,
+            $user_role,
+            $isStaff ? 1 : 0,
+            $id
+        ]);
     }
+
 
     // Xoá tài khoản
     public static function delete($id)
@@ -45,17 +62,35 @@ class User
     }
 
     // Đăng nhập (kiểm tra tài khoản)
-    public static function authenticate($username, $password)
+    public static function authenticate($email, $password)
     {
         global $pdo;
-        $stmt = $pdo->prepare("SELECT * FROM Users WHERE user_name = ?");
-        $stmt->execute([$username]);
+        $stmt = $pdo->prepare("SELECT * FROM Users WHERE user_email = ?");
+        $stmt->execute([$email]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($user && password_verify($password, $user['user_password'])) {
-            return $user;
-        }
+
 
         return false;
     }
+    // Lấy tất cả người dùng theo phân trang
+    public static function paginate($limit, $offset)
+    {
+        global $pdo;
+        $stmt = $pdo->prepare("SELECT * FROM Users LIMIT :limit OFFSET :offset");
+        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // Đếm tổng số người dùng
+    public static function countAll()
+    {
+        global $pdo;
+        $stmt = $pdo->query("SELECT COUNT(*) FROM Users");
+        return $stmt->fetchColumn();
+    }
+
+    // Các hàm còn lại như find, create, update, delete...
 }

@@ -999,6 +999,27 @@ main .btn-send:hover {
 /* --- CSS Bổ Sung & Điều Chỉnh cho Bảng Tài Khoản --- */
 
 /* Đổi tên class cho header và list */
+/* Định dạng cho nút "Thêm phim mới" */
+.widget-header {
+    text-align: right;
+    margin: 20px 0;
+}
+.btn-add-user {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color:#0d6efd; /* Màu nền xanh */
+    color: white; /* Màu chữ trắng */
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px; /* Bo góc */
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi hover */
+.btn-add-movie:hover {
+    background-color: #0d6efd; /* Màu nền khi hover */
+}
 .account-table-header {
     display: flex;
     align-items: center;

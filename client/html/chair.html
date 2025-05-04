@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đặt vé xem phim LẬT MẶT 8: VÒNG TAY NẮNG</title>
+    <link rel="icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="../css/chair.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/"><img src="img/logo.jpg" alt="cinema"></a>
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/lich-chieu.html">Lịch chiếu</a></li>
+                <li><a href="/packets.html">Mua Gói</a></li>
+                <li><a href="/phim.html">Phim Đang Chiếu</a></li>
+                <li><a href="/phim-sap-chieu.html">Phim Sắp Chiếu</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="seat-selection">
+        <div class="screen-thumb">
+            <h4 class="screen">Màn hình</h4>
+            <img src="http://pixner.net/boleto/demo/assets/images/movie/screen-thumb.png" alt="movie">
+        </div>
+        
+        <div class="seat-grid">
+            <!-- Row A -->
+            <div class="seat" onclick="selectSeat(this)">A01</div>
+            <div class="seat" onclick="selectSeat(this)">A02</div>
+            <div class="seat" onclick="selectSeat(this)">A03</div>
+            <div class="seat" onclick="selectSeat(this)">A04</div>
+            <div class="seat" onclick="selectSeat(this)">A05</div>
+            <div class="seat" onclick="selectSeat(this)">A06</div>
+            <div class="seat" onclick="selectSeat(this)">A07</div>
+            <div class="seat" onclick="selectSeat(this)">A08</div>
+            <div class="seat" onclick="selectSeat(this)">A09</div>
+            <div class="seat" onclick="selectSeat(this)">A10</div>
+            <div class="seat" onclick="selectSeat(this)">A11</div>
+
+            <!-- Row B -->
+            <div class="seat" onclick="selectSeat(this)">B01</div>
+            <div class="seat" onclick="selectSeat(this)">B02</div>
+            <div class="seat" onclick="selectSeat(this)">B03</div>
+            <div class="seat" onclick="selectSeat(this)">B04</div>
+            <div class="seat" onclick="selectSeat(this)">B05</div>
+            <div class="seat" onclick="selectSeat(this)">B06</div>
+            <div class="seat" onclick="selectSeat(this)">B07</div>
+            <div class="seat" onclick="selectSeat(this)">B08</div>
+            <div class="seat" onclick="selectSeat(this)">B09</div>
+            <div class="seat" onclick="selectSeat(this)">B10</div>
+            <div class="seat" onclick="selectSeat(this)">B11</div>
+
+            <!-- Row C -->
+            <div class="seat" onclick="selectSeat(this)">C01</div>
+            <div class="seat" onclick="selectSeat(this)">C02</div>
+            <div class="seat" onclick="selectSeat(this)">C03</div>
+            <div class="seat" onclick="selectSeat(this)">C04</div>
+            <div class="seat" onclick="selectSeat(this)">C05</div>
+            <div class="seat" onclick="selectSeat(this)">C06</div>
+            <div class="seat" onclick="selectSeat(this)">C07</div>
+            <div class="seat" onclick="selectSeat(this)">C08</div>
+            <div class="seat" onclick="selectSeat(this)">C09</div>
+            <div class="seat" onclick="selectSeat(this)">C10</div>
+            <div class="seat" onclick="selectSeat(this)">C11</div>
+
+            <!-- Row D -->
+            <div class="seat" onclick="selectSeat(this)">D01</div>
+            <div class="seat" onclick="selectSeat(this)">D02</div>
+            <div class="seat" onclick="selectSeat(this)">D03</div>
+            <div class="seat" onclick="selectSeat(this)">D04</div>
+            <div class="seat" onclick="selectSeat(this)">D05</div>
+            <div class="seat" onclick="selectSeat(this)">D06</div>
+            <div class="seat" onclick="selectSeat(this)">D07</div>
+            <div class="seat" onclick="selectSeat(this)">D08</div>
+            <div class="seat" onclick="selectSeat(this)">D09</div>
+            <div class="seat" onclick="selectSeat(this)">D10</div>
+            <div class="seat" onclick="selectSeat(this)">D11</div>
+
+            <!-- Row E -->
+            <div class="seat" onclick="selectSeat(this)">E01</div>
+            <div class="seat" onclick="selectSeat(this)">E02</div>
+            <div class="seat" onclick="selectSeat(this)">E03</div>
+            <div class="seat" onclick="selectSeat(this)">E04</div>
+            <div class="seat" onclick="selectSeat(this)">E05</div>
+            <div class="seat" onclick="selectSeat(this)">E06</div>
+            <div class="seat" onclick="selectSeat(this)">E07</div>
+            <div class="seat" onclick="selectSeat(this)">E08</div>
+            <div class="seat" onclick="selectSeat(this)">E09</div>
+            <div class="seat" onclick="selectSeat(this)">E10</div>
+            <div class="seat" onclick="selectSeat(this)">E11</div>
+
+            <!-- Row F -->
+            <div class="seat" onclick="selectSeat(this)">F01</div>
+            <div class="seat" onclick="selectSeat(this)">F02</div>
+            <div class="seat" onclick="selectSeat(this)">F03</div>
+            <div class="seat" onclick="selectSeat(this)">F04</div>
+            <div class="seat" onclick="selectSeat(this)">F05</div>
+            <div class="seat" onclick="selectSeat(this)">F06</div>
+            <div class="seat" onclick="selectSeat(this)">F07</div>
+            <div class="seat" onclick="selectSeat(this)">F08</div>
+            <div class="seat" onclick="selectSeat(this)">F09</div>
+            <div class="seat" onclick="selectSeat(this)">F10</div>
+            <div class="seat" onclick="selectSeat(this)">F11</div>
+
+            <!-- Row G -->
+            <div class="seat" onclick="selectSeat(this)">G01</div>
+            <div class="seat" onclick="selectSeat(this)">G02</div>
+            <div class="seat" onclick="selectSeat(this)">G03</div>
+            <div class="seat" onclick="selectSeat(this)">G04</div>
+            <div class="seat" onclick="selectSeat(this)">G05</div>
+            <div class="seat" onclick="selectSeat(this)">G06</div>
+            <div class="seat" onclick="selectSeat(this)">G07</div>
+            <div class="seat" onclick="selectSeat(this)">G08</div>
+            <div class="seat" onclick="selectSeat(this)">G09</div>
+            <div class="seat" onclick="selectSeat(this)">G10</div>
+            <div class="seat" onclick="selectSeat(this)">G11</div>
+            
+
+            <!-- Row H -->
+            <div class="seat" onclick="selectSeat(this)">H01</div>
+            <div class="seat" onclick="selectSeat(this)">H02</div>
+            <div class="seat" onclick="selectSeat(this)">H03</div>
+            <div class="seat" onclick="selectSeat(this)">H04</div>
+            <div class="seat" onclick="selectSeat(this)">H05</div>
+            <div class="seat" onclick="selectSeat(this)">H06</div>
+            <div class="seat" onclick="selectSeat(this)">H07</div>
+            <div class="seat" onclick="selectSeat(this)">H08</div>
+            <div class="seat" onclick="selectSeat(this)">H09</div>
+            <div class="seat" onclick="selectSeat(this)">H10</div>
+            <div class="seat" onclick="selectSeat(this)">H11</div>
+        </div>
+
+        <div class="footer-info">
+            <p><strong>Ghế đã chọn: </strong><span id="total_ticket">0</span></p>
+            <p><strong>Giá vé: </strong><span id="total_money">0 VNĐ</span></p>
+            <a href="#" class="btn">Tiếp theo</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-banner">
+            <img src="img/banner.jpg" alt="Footer Image">
+        </div>
+    </footer>
+
+    <script src="../js/chair.js"></script>
+</body>
+</html>

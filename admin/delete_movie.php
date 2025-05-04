@@ -15,5 +15,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_movie'])) {
         echo "Có lỗi khi xóa phim.";
     }
 }
-?>
-?>
